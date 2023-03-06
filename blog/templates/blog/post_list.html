@@ -5,6 +5,36 @@
     <title>Post List</title>
 </head>
 <body>
+  <header>
+      <h1><a href="/">Go to Blog main page</a></h1>
+  </header>
 
+  <article>
+      <h2>This is example</h2>
+      {% for post in posts %}
+      <p>{{ post }}</p>
+      {% endfor %}
+      <hr>
+      <pre>
+          <a href="">Second article</a>
+          Second article, using tag "pre"
+          Notice, how it displays.
+
+          I can make spaces, paragraphs inside, and it will display text just like I've written.
+      </pre>
+  </article>
+
+      <h2>This is second example</h2>
+      {% for post in posts%}
+       <article>
+      <time>published: {{ post.published_date }}</time>
+           <p><a href="">{{ post.title }}</a></p>
+      <p>text: {{ post.text|linebreaksbr}}</p>
+       </article>
+      {% endfor %}
+
+  <footer>
+      <p> I am footer</p>
+  </footer>
 </body>
 </html>
