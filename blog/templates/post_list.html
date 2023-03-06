@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block header %}
+   <h1><a href="/">Go to Blog main page</a></h1>
+{% endblock %}
+
+{% block content %}
+   <h2 class="description">This is an example</h2>
+
+   <div class="post_wrapper">
+   {% for post in posts%}
+     <article class="post">
+         <a href="">{{ post.title }}</a>
+         <time>published: {{ post.published_date }}</time>
+         <p>
+            {{ post.text }}
+         </p>
+     </article>
+   {% endfor %}
+   </div>
+
+{% endblock %}
+
+
+
