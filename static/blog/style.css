@@ -6,12 +6,14 @@ h1 a, h2 a {
      color: #C25100;
 }
 
-body {
+.animationWrapper {
+    width: 100%;
     overflow: hidden;
 }
 
 .post{
       max-width: calc(50% - 14px);
+      width: 100%;
       height: 200px;
       padding: 10px;
       border: 4px solid black;
